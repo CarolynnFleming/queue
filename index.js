@@ -1,16 +1,17 @@
 
 class Queue  {
+    //constructor that takes in one property
     constructor() {
         this.queue = [];
     }
-
+//adding an item to the first index in the array
     enqueue(item) {
         return this.queue.unshift(item);
         
     }
 
     dequeue() {
-
+//removes the first item in the queue of the last item in the array if statment, so that if there is no more items in array returns null
         if(this.hasNext()){
             return this.queue.pop();
         } else {
@@ -19,6 +20,7 @@ class Queue  {
     }
 
     hasNext() {
+        //returns true if queue is empty
         return this.queue.length !== 0;
     }
 }
